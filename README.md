@@ -9,7 +9,7 @@ resource server從request取得accessToken向redis驗證,驗證成功後藉由sp
 
 測試
 ---
-####Resource Owner Password Credentials Grant Flow （使用者的帳號密碼）
+#### Resource Owner Password Credentials Grant Flow （使用者的帳號密碼）
 * 先向OAuth2取得token  
 測試scope權限 #oauth2.hasScope('read')
 ````
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'cookie: JSESSIONID=58724C454EED0C3FEA6718D6F5B01024' \
   -b JSESSIONID=58724C454EED0C3FEA6718D6F5B01024
 ````  
-####Client Credentials Grant Flow （Client 的帳號密碼）
+#### Client Credentials Grant Flow （Client 的帳號密碼）
 * 先向OAuth2取得token  
 測試scope權限 #oauth2.hasScope('infomessage.2c.marquee.read')
 ````$xslt
