@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: resource-service
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3306/demo_account?useUnicode=true&characterEncoding=UTF8&useSSL=false
+     username: root
+     password:  '123456'
+     driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 100
+        max-wait: 60s
+        max-idle: 10
+        min-idle: 1
+    timeout: 10000s
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  #port: 8910
+  tomcat:
+    max-threads: 500
+    min-spare-threads: 64
+    max-connections: 2000
+    uri-encoding: utf-8
+    accept-count: 2000
+
+logging:
+  file: ./logs
+  level:
+    root: info
+
+auth:
+  server:
+#    url: http://localhost:8888/oauth/check_token
+    url: http://OAUTH-SERVICE/oauth/check_token
+    clientId: beclient
+    clientsecret: 123456
